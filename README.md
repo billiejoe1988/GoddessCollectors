@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+=======
+# GoddessCollector
+Goddess Collection is a web application built using Next.js, Tailwind, Firebase and TypeScript, offering a global platform for the online sale of special TCG (Trading Card Game) cards from Pokemon and One Piece. Explore our curated selection of unique and rare cards, bringing the enchantment of these iconic franchises to collectors worldwide.
+>>>>>>> 5485d09d849d31123b1c110434ae46b8697149dc
