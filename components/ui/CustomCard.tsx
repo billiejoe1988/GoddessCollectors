@@ -14,7 +14,7 @@ export default function CustomCard() {
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="/bzSd.avif"
+            src="/bzSD.avif"
           />
         </Card>
         <Card className="col-span-12 sm:col-span-4 h-[500px] p-4 cursor-pointer" data-hover="true" data-focus="true" style={{ border: "solid 2px transparent" }}>
@@ -51,7 +51,7 @@ export default function CustomCard() {
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="/grSd.avif"
+            src="/grSD.avif"
           />
         </Card>
         <Card className="col-span-12 sm:col-span-4 h-[500px] p-4 cursor-pointer" data-hover="true" data-focus="true" style={{ border: "solid 2px transparent" }}>

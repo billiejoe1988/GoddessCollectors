@@ -69,7 +69,7 @@ export default function Header() {
               <div style={{ cursor: "pointer" }} >
                 <SearchIcon size={19} />
               </div>
-              <div className="px-5 pt-2" style={{ cursor: "pointer" }} >
+              <div className="px-20 pt-2" style={{ cursor: "pointer" }} >
                 <Link href="/pages/Cart"> 
                     <ShoppingCartIcon size={35} />
                 </Link>
