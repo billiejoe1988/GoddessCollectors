@@ -5,6 +5,7 @@ import { Logo } from "./Logo.js";
 import Link from 'next/link'; 
 import { SearchIcon } from "./SearchIcon";
 import ShoppingCartIcon  from "./ShoppingCartIcon"
+import Image from "next/image.js";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,17 +30,17 @@ export default function Header() {
           <NavbarContent className="hidden sm:flex gap-3 flex-grow ml-20">
             <NavbarItem>
               <Link href="/pages/TGCPokemon"> 
-                <img src="/pkLogo.png" alt="Tgc pokemon logo"  width={100} height={100}/>
+                <Image src="/pkLogo.png" alt="Tgc pokemon logo"  width={100} height={100}/>
               </Link>
             </NavbarItem>
             <NavbarItem isActive>
               <Link href="/pages/TGCOnePiece" aria-current="page">
-                <img src="/opLogo.png" alt="onepiece tgc" width={100} height={100} />
+                <Image src="/opLogo.png" alt="onepiece tgc" width={100} height={100} />
               </Link>
             </NavbarItem>
             <NavbarItem>
               <Link href="/pages/Sculpture"> 
-                <img src="/sideshow.png" alt="sideshow" width={100} height={100} />
+                <Image src="/sideshow.png" alt="sideshow" width={100} height={100} />
               </Link>
             </NavbarItem>
           </NavbarContent>

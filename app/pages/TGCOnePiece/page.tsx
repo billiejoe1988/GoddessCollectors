@@ -3,7 +3,7 @@ import React from 'react'
 const TGCOnePiece = () => {
   return (
     <div>
-      "contenido de tgc one piece"
+      contenido de tgc one piece
     </div>
   )
 }

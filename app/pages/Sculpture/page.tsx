@@ -3,7 +3,7 @@ import React from 'react'
 const Sculpture = () => {
   return (
     <div>
-      "contenido de esculturas"
+      contenido de esculturas
     </div>
   )
 }

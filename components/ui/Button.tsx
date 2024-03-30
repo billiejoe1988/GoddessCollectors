@@ -18,7 +18,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ onClick, children, ...props
       radius="full"
       className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
       onClick={handleClick}
-      style={{ padding: "12px 24px" }}
+      style={{ padding: "20px 27px" }}
       {...props}
     >
       {children}
