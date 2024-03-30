@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react"; 
+import ProductDetail from "@/components/product/ProductDetail";
 
-interface Params {
-    id: any;
+interface Props {
+    slug: string; 
 }
-const SculptureDetail = ({ params }: { params: Params }) => {
-    console.log(params);
 
+const SculptureDetail: React.FC<Props> = ({ slug }) => {
     return (
         <div>
-            Estás viendo: {params.id}
+            <ProductDetail slug={slug} />
         </div>
     );
 };

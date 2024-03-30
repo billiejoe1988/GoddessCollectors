@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import ProductList from "../../../components/product/ProductList";
 
-const TGCPokemon = () => {
+const TGCPokemon: React.FC = () => {
   return (
     <div>
-      contenido de tgc pokemon
+      <ProductList type="TgcPokemon" />
     </div>
-  )
-}
+  );
+};
 
 export default TGCPokemon

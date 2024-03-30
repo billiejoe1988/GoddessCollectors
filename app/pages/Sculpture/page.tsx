@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ProductList from "../../../components/product/ProductList";
 
-const Sculpture = () => {
+const SculpturePage: React.FC = () => {
   return (
     <div>
-      contenido de esculturas
+      <ProductList type="Sculpture" />
     </div>
-  )
-}
+  );
+};
 
-export default Sculpture
+export default SculpturePage;

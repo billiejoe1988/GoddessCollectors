@@ -1,11 +1,7 @@
 import React from "react";
-import Header from "../components/ui/Header";
-import Footer from "../components/ui/Footer";
 import BasicCards from "../components/ui/BasicCards";
 import CustomCard from "../components/ui/CustomCard";
-import BackgroundSVG from "../components/ui/BackgroundSVG";
 import ImgBanner from "../components/ui/ImgBanner";
-import CardSimple from "../components/ui/CardSimple"
 
 export default function Home() {
   return (

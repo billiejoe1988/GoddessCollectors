@@ -1,11 +1,12 @@
 import React from 'react'
+import ProductList from "../../../components/product/ProductList";
 
-const TGCOnePiece = () => {
+const TGCOnePiece: React.FC = () => {
   return (
     <div>
-      contenido de tgc one piece
+      <ProductList type="TgcOnePiece" />
     </div>
-  )
-}
+  );
+};
 
-export default TGCOnePiece
+export default TGCOnePiece;

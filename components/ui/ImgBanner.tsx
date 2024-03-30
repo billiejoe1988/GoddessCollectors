@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { AnyCnameRecord } from 'dns';
 
 interface ImgBannerProps {
   src: any;
@@ -9,14 +8,13 @@ interface ImgBannerProps {
 
 const ImgBanner: React.FC<ImgBannerProps> = ({ src, alt }) => {
   return (
-    <div className="w-full max-w-screen-xl mx-auto">
+    <div className="w-full max-w-screen-xl">
       <Image
         src={src}  
         alt={alt} 
-        layout="responsive"  
-        width={1000} 
-        height={400}
-        className="w-full"
+        width={500} 
+        height={300}
+        className="mx-auto"
       />
     </div>
   );
