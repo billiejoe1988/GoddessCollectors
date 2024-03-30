@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { metadata } from "../Global/StaticData";
+import Header from "../components/ui/Header"
+import Footer from "../components/ui/Footer"
+import BackgroundSVG from "../components/ui/BackgroundSVG"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +24,12 @@ export default function RootLayout({
         <meta property="og:type" content={metadata.openGraph.type} />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <BackgroundSVG />
+        <Header/>
+        {children}
+        <Footer/>
+        </body>
     </html>
   );
 }

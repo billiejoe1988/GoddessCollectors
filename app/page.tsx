@@ -10,10 +10,6 @@ import CardSimple from "../components/ui/CardSimple"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen relative">
-      <BackgroundSVG />
-      <header>
-        <Header />
-      </header>
       <main className="flex-grow w-full px-3 py-12">
         <section>
           <div>
@@ -31,41 +27,8 @@ export default function Home() {
            <div>
             <ImgBanner src="/expP5.jpg" alt="BannerPokemon" />
           </div>
-          <div>
-            <CardSimple
-              imageUrl="/eliteP1.avif"
-              altText="Woman listening to music"
-              description="Available soon."
-              buttonText="Notify me"
-              buttonLink="/pages/TGCOnePiece"
-            />
-            <CardSimple
-              imageUrl="/eliteP3.avif"
-              altText="Man listening to music"
-              description="New product release."
-              buttonText="View details"
-              buttonLink="/pages/TGCOnePiece"
-            />
-            <CardSimple
-              imageUrl="/eliteP4.avif"
-              altText="Woman listening to music"
-              description="Available soon."
-              buttonText="Notify me"
-              buttonLink="/pages/TGCOnePiece"
-            />
-            <CardSimple
-              imageUrl="/eliteP5.avif"
-              altText="Man listening to music"
-              description="New product release."
-              buttonText="View details"
-              buttonLink="/pages/TGCOnePiece"
-            />
-           </div>
         </section>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
