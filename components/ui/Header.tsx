@@ -18,8 +18,8 @@ export default function Header() {
     <header className="px-3" style={{ 
       background: "linear-gradient(to bottom right, rgba(14, 65, 102, 0.86), #0e4166)",
       boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)"
-    }}  isBordered shadow>
-      <Navbar>
+    }}>
+      <Navbar isBordered shadow>
         <NavbarContent justify="start">
           <NavbarBrand className="mr-4">
               <Link href= "/"> 
@@ -27,7 +27,7 @@ export default function Header() {
               </Link>
               <p className="hidden sm:block text-white text-lg px-3">Goddess Collectors</p>
           </NavbarBrand>
-          <NavbarContent className="hidden sm:flex gap-3 flex-grow ml-20">
+          <NavbarContent className="hidden sm:flex gap-3 flex-grow ml-20" isBordered shadow>
             <NavbarItem>
               <Link href="/pages/TGCPokemon"> 
                 <Image src="/pkLogo.png" alt="Tgc pokemon logo"  width={100} height={100}/>
