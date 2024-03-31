@@ -41,14 +41,14 @@ export default function Header() {
               </NavbarItem>
               <NavbarItem>
                 <Link href="/pages/Sculpture"> 
-                  <Image src="/sideshow.png" alt="sideshow" width={100} height={100} />
+                  <Image src="/sideshow.png" alt="sideshow" width={100} height={100} style={{ width: "auto", height: "auto" }} />
                 </Link>
               </NavbarItem>
             </NavbarContent>
           </NavbarContent>
 
           <NavbarContent as="div" className="items-center flex-grow pl-12" justify="center">
-            <div className="relative flex items-center w-full">
+            <div className="relative flex items-center w-full mx-auto">
               <Input
                 classNames={{
                   base: "max-w-full sm:max-w-[20rem] h-10 px-2 border-b-2 border-gray-400 bg-transparent",
@@ -69,7 +69,7 @@ export default function Header() {
               <div style={{ cursor: "pointer" }} >
                 <SearchIcon size={19} />
               </div>
-              <div className="px-20 pt-2" style={{ cursor: "pointer" }} >
+              <div className="ml-auto p-2" style={{ cursor: "pointer" }} >
                 <Link href="/pages/Cart"> 
                     <ShoppingCartIcon size={35} />
                 </Link>
@@ -83,7 +83,7 @@ export default function Header() {
                     color="secondary"
                     name="Jason Hughes"
                     style={{
-                      width: "47px",
+                      width: "45px",
                       height: "45px",
                       borderRadius: '50%',
                       overflow: 'hidden',
@@ -99,11 +99,13 @@ export default function Header() {
                     <p className="font-semibold">zoey@example.com</p>
                   </DropdownItem>
                   <DropdownItem key="settings">My Settings</DropdownItem>
-                  <DropdownItem key="team_settings">Team Settings</DropdownItem>
-                  <DropdownItem key="analytics">Analytics</DropdownItem>
-                  <DropdownItem key="system">System</DropdownItem>
-                  <DropdownItem key="configurations">Configurations</DropdownItem>
-                  <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
+                  <DropdownItem key="admin">
+                    <Link href="/pages/Admin">Admin</Link>
+                  </DropdownItem>
+                  <DropdownItem key="orders">Orders</DropdownItem>
+                  <DropdownItem key="contactUs">
+                    <Link href="/pages/ContactUs">Contact Us</Link>
+                  </DropdownItem>
                   <DropdownItem key="logout" className="bg-blue-200 border-2 py-1 my-2">
                     Log Out
                   </DropdownItem>
@@ -116,3 +118,4 @@ export default function Header() {
     </header>
   );
 }
+

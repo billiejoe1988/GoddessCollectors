@@ -9,13 +9,7 @@ interface ImgBannerProps {
 const ImgBanner: React.FC<ImgBannerProps> = ({ src, alt }) => {
   return (
     <div className="w-full max-w-screen-xl">
-      <Image
-        src={src}  
-        alt={alt} 
-        width={500} 
-        height={300}
-        className="mx-auto"
-      />
+      <Image src={src} alt={alt} width={1200} height={300} style={{ width: "100%", height: "auto" }} />
     </div>
   );
 };

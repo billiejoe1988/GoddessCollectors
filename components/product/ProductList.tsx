@@ -20,7 +20,7 @@ const ProductList: React.FC<ProductListProps> = ({ type }) => {
   const items = type === 'all' ? data : data.filter((item) => item.type === type);
 
   return (
-    <section className="container m-auto flex justify-center items-center gap-12 flex-wrap">
+    <section className="container m-auto flex justify-center items-center gap-8 flex-wrap">
       {items.map((item) => (
         <CardSimple key={item.slug} item={item} />
       ))}
