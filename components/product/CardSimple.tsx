@@ -38,7 +38,7 @@ const CardSimple: React.FC<CardSimpleProps> = ({ item }) => {
           </CardBody>
           <CardFooter className="mt-auto">
             <Link href={`/pages/Detail/${item.slug}`}>
-              <Button className="text-tiny text-white bg-gradient-to-tr from-pink-500 to-yellow-500 hover:bg-black/30 transition duration-300 p-2" variant="flat" color="default" radius="lg" size="xl">
+              <Button className="text-tiny text-white bg-gradient-to-tr from-pink-500 to-yellow-500 hover:bg-black/30 transition duration-300 p-2" variant="flat" color="default" radius="lg" size="lg">
                 View More
               </Button>
             </Link>
