@@ -10,14 +10,14 @@ export default function Home() {
           <div>
             <ImgBanner src="/b01.png" alt="BannerPokemon" />
           </div>
-        <section>
-          <h2 className="text-2xl font-semibold my-6">Best Sellers</h2>
+        <section className="my-10 py-10">
+          <h2 className="text-4xl font-semibold text-white mt-6">Best Sellers</h2>
           <BasicCards />
         </section>
         <div className="my-10">
             <ImgBanner src="/b0000.jpg" alt="BannerSculp" />
         </div>
-        <h2 className="text-2xl font-semibold m-6">Pre-Sales</h2>
+        <h2 className="text-4xl font-semibold text-white mt-6">Next Arrived</h2>
         <section className="my-20 py-20">
           <CustomCard />
         </section>

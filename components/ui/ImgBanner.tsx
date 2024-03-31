@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 
@@ -8,8 +9,26 @@ interface ImgBannerProps {
 
 const ImgBanner: React.FC<ImgBannerProps> = ({ src, alt }) => {
   return (
-    <div className="w-full">
-      <Image src={src} alt={alt} layout="responsive" width={1200} height={300} />
+    <div className="w-full relative">
+      <style jsx>{`
+        .img-container {
+          position: relative;
+          width: 100%;
+          padding-top: 25%;
+        }
+
+        .img-container img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      `}</style>
+      <div className="img-container">
+        <Image src={src} alt={alt} layout="fill" />
+      </div>
     </div>
   );
 };
