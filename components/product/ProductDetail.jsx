@@ -1,10 +1,15 @@
-
+import React from "react";
 import Image from "next/image";
-import { data } from "@/data/db";
 import QtySelector from "./QtySelector";
 
-const ProductDetail = ({ slug }) => {
-    const item = data.find(p => p.slug === slug);
+const ProductDetail = async ({ slug }) => {
+    const item = await fetch(`http://localhost:3000/api/product/${slug}`, {
+        cache: 'no-store',
+        next:{
+            revalidate: 0
+        }
+
+    }).then(res => res.json());
 
     return (
         <div className="max-w-4xl m-auto bg-white bg-opacity-75 rounded-lg p-8">
@@ -35,4 +40,5 @@ const ProductDetail = ({ slug }) => {
 };
 
 export default ProductDetail;
+
 

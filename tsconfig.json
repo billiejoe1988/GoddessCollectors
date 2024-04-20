@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ui/BackgroundSVG.jsx", "components/ui/CustomCard.tsx", "components/product/ProductDetailjtsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ui/BackgroundSVG.jsx", "components/ui/CustomCard.tsx", "components/product/ProductDetailjtsx", "app/api/product/[slug]/route.js", "app/api/products/[type]/route.js"],
   "exclude": ["node_modules"]
 }
