@@ -33,5 +33,3 @@ const ProductList: React.FC<ProductListProps> = async ({ type }) => {
 };
 
 export default ProductList;
-
-

@@ -1,51 +1,50 @@
 "use client"
-import { useState } from "react"
-import Button from "../ui/Button"
-
+import { useState } from "react";
+import Button from "../ui/Button";
 
 const ContactForm = () => {
     const [values, setValues] = useState({
         email: '',
         text: ''
-    })
+    });
 
     const handleChange = (e) => { 
         setValues({ 
             ...values, 
             [e.target.name]: e.target.value
-        })
-     }
+        });
+    };
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         await fetch('http://localhost:3000/api/contact', {
             method: 'POST',
             body: JSON.stringify(values)
-        })
-    }
+        });
+    };
 
     return (
-        <form onSubmit={handleSubmit} className="my-12">
+        <form onSubmit={handleSubmit} className="my-12 py-12">
             <input
                 type="email"
                 required
-                placeholder="Tu email"
-                className="p-2 rounded w-1/2 border border-blue-100 block my-4"
+                placeholder="Your email"
+                className="p-4 rounded-lg w-full border border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"
                 name="email"
                 onChange={handleChange}
             />
             <textarea
                 required
-                placeholder="Déjanos un mensaje"
-                className="resize-none w-1/2 h-24 p-2 rounded border block border-blue-100 my-4"
+                placeholder="Read a message"
+                className="resize-none p-4 rounded-lg w-full h-48 border border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out mt-4"
                 name="text"
                 onChange={handleChange}
             />
 
-            <Button type="submit">Send</Button>
+            <Button type="submit" className="my-6">Send</Button>
         </form>
-    )
-}
+    );
+};
 
-export default ContactForm
+export default ContactForm;

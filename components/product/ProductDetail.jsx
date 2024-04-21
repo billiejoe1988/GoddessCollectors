@@ -25,7 +25,7 @@ const ProductDetail = async ({ slug }) => {
                 </div>
                 <div className="w-1/2 flex flex-col justify-between">
                     <div>
-                        <h2 className="text-4xl font-bold border-b border-gray-200 pb-4 my-5 mx-5">{item.title}</h2>
+                        <h2 className="text-4xl font-bold border-b border-gray-200 pb-4 my-5 mx-5 py-5">{item.title}</h2>
                         <p className="text-gray-600 mt-5 mx-5">{item.description}</p>
                         <p className="text-4xl my-5 font-bold mt-3 mx-5">$ {item.price}</p>
                         <p className="text-gray-600 font-semibold mx-5">Type: {item.type}</p>

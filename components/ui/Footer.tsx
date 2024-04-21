@@ -1,4 +1,5 @@
 import React from "react";
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { LogoXl } from "./LogoXl.js";
 
 export default function Footer() {
@@ -6,13 +7,22 @@ export default function Footer() {
         <footer className="text-white mt-auto py-2">
             <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
                 <div className="flex items-center">
-                <LogoXl />
+                    <LogoXl />
                 </div>
                 <div className="flex flex-col items-center sm:items-start mt-4 sm:mt-0">
-                    <h2 className="text-xl py-3"> Contact Us </h2>
-                    <p>Email: example@example.com</p>
-                    <p>Phone: +1234567890</p>
-                    <p>Address: Boulevard of Broken Dreams 431 st </p>
+                    <h2 className="text-xl py-3 text-orange-400"> Contact Us </h2>
+                    <div className="flex items-center">
+                        <FiMail className="text-orange-400 mr-2" />
+                        <p className="text-white">Email: <span className="text-white">example@example.com</span></p>
+                    </div>
+                    <div className="flex items-center mt-2">
+                        <FiPhone className="text-orange-400 mr-2" />
+                        <p className="text-white">Phone: <span className="text-white">+1234567890</span></p>
+                    </div>
+                    <div className="flex items-center mt-2">
+                        <FiMapPin className="text-orange-400 mr-2" />
+                        <p className="text-white">Address: <span className="text-white">Boulevard of Broken Dreams 431 st</span></p>
+                    </div>
                 </div>
                 <div className="mt-4 sm:mt-0">
                     <iframe 
@@ -23,7 +33,7 @@ export default function Footer() {
                     </iframe>
                 </div>
             </div>
-            <p className="text-sm text-gray-100 text-center mt-4">© {new Date().getFullYear()} All rights reserved. Created by Arbelaiz.dev</p>
+            <p className="text-sm text-gray-100 text-center mt-4 text-orange-400">© {new Date().getFullYear()} All rights reserved. Created by Arbelaiz.dev</p>
         </footer>
     );
 }

@@ -1,19 +1,16 @@
 'use client'
-import Button from './Button';
+import React from 'react';
+import Button from '../ui/Button';
 import { useCartContext } from '../context/CartContext';
 
 const CartCounter = ({ itemId, counter, max }) => {
-    const { addToCart, removeFromCart, cart } = useCartContext();
+    const { addToCart, removeFromCart, updateCartItem, cart } = useCartContext();
 
     const increase = () => {
         const itemInCart = cart.find(item => item.itemId === itemId);
 
-
         if (itemInCart && itemInCart.quantity < max) {
-            const updatedCart = cart.map(item =>
-                item.itemId === itemId ? { ...item, quantity: item.quantity + 1 } : item
-            );
-            setCart(updatedCart);
+            updateCartItem(itemId, itemInCart.quantity + 1);
         } else if (!itemInCart) { 
             addToCart({ itemId, quantity: 1 });
         }
@@ -21,23 +18,19 @@ const CartCounter = ({ itemId, counter, max }) => {
 
     const decrease = () => {
         if (counter > 1) {
-            const updatedCart = cart.map(item =>
-                item.itemId === itemId ? { ...item, quantity: item.quantity - 1 } : item
-            );
-            setCart(updatedCart);
+            updateCartItem(itemId, counter - 1);
         } else {
             removeFromCart(itemId);
         }
     };
 
     return (
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 rounded">
             <Button onClick={increase}> + </Button>
-                <p>{counter}</p>
+            <p>{counter}</p>
             <Button onClick={decrease}> - </Button>
         </div>
     );
 };
 
 export default CartCounter;
-

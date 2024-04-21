@@ -1,10 +1,10 @@
-import Button from "../ui/Button"
-import Image from "next/image"
-import { useCartContext } from "../context/CartContext"
-import CartCounter from '../ui/CartCounter'
+import Button from "../ui/Button";
+import Image from "next/image";
+import { FaTrash } from 'react-icons/fa';
+import { useCartContext } from "../context/CartContext";
+import CartCounter from '../ui/CartCounter';
 
-const CartItem = ({item}) => {
-
+const CartItem = ({ item }) => {
     const { removeFromCart } = useCartContext();
 
     const handleRemoveItem = () => {
@@ -12,7 +12,7 @@ const CartItem = ({item}) => {
     };
 
     return (
-        <li className="shadow flex justify-between items-center max-w-xl gap-6 p-4 my-4 bg-white rounded">
+        <li className="shadow flex justify-between items-center max-w-xl gap-6 p-4 my-6 bg-white rounded">
             <Image
                 src={item.img}
                 alt={item.title}
@@ -29,16 +29,11 @@ const CartItem = ({item}) => {
                <CartCounter itemId={item.slug} counter={item.quantity} max={10} />
             </div>
 
-            <Button className="bg-red-600" onClick={handleRemoveItem}>
-                <Image
-                    src={'/trash.png'}
-                    alt="Trash icon"
-                    width={30}
-                    height={30}
-                />
+            <Button onClick={handleRemoveItem}>
+                <FaTrash />
             </Button>
         </li>
-    )
-}
+    );
+};
 
-export default CartItem
+export default CartItem;

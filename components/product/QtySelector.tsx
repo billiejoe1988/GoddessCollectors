@@ -28,7 +28,7 @@ const QtySelector: React.FC<QtySelectorProps> = ({ item }) => {
   return (
     <div className="flex flex-col gap-5 mt-6">
       <Counter max={item.instock} counter={quantity} setCounter={setQuantity} />
-      <Button onClick={handleAdd}>Add to Cart</Button>
+      <Button onClick={handleAdd} className="rounded my-3">Add to Cart</Button>
     </div>
   );
 };
