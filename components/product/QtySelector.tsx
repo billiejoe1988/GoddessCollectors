@@ -1,8 +1,8 @@
 'use client'
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Counter from "../ui/Counter";
 import Button from "../ui/Button";
-import { userCartContext } from '../context/CartContext'
+import { useCartContext } from '../context/CartContext';
 
 interface Item {
   instock: number;
@@ -14,8 +14,9 @@ interface QtySelectorProps {
 }
 
 const QtySelector: React.FC<QtySelectorProps> = ({ item }) => {
+  const { addToCart } = useCartContext(); 
+  
   const [quantity, setQuantity] = useState(1);
-  const { addToCart } = useContext(userCartContext);
 
   const handleAdd = () => {
     addToCart({

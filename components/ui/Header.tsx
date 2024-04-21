@@ -4,7 +4,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Input, DropdownItem, Dr
 import { Logo } from "./Logo.js";
 import Link from 'next/link'; 
 import { SearchIcon } from "./SearchIcon";
-import ShoppingCartIcon  from "./ShoppingCartIcon"
+import CartWidget  from "./CartWidget";
 import Image from "next/image.js";
 
 export default function Header() {
@@ -70,9 +70,7 @@ export default function Header() {
                 <SearchIcon size={19} />
               </div>
               <div className="ml-auto p-2" style={{ cursor: "pointer" }} >
-                <Link href="/pages/Cart"> 
-                    <ShoppingCartIcon size={35} />
-                </Link>
+                    <CartWidget />
               </div>
               <Dropdown placement="bottom-end" isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
                 <DropdownTrigger>
