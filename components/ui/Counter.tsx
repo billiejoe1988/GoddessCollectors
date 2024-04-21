@@ -14,9 +14,9 @@ const Counter: React.FC<CounterProps> = ({ counter, setCounter, max }) => {
 
     return (
         <div className="flex items-center gap-3">
-            <Button onClick={decrease}> - </Button>
-            <p>{counter}</p>
             <Button onClick={increase}> + </Button>
+               <p>{counter}</p>
+            <Button onClick={decrease}> - </Button>
         </div>
     );
     
