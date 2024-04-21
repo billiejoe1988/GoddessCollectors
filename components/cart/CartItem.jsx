@@ -1,8 +1,9 @@
-import Button from "../ui/Button";
+import React from "react";
 import Image from "next/image";
 import { FaTrash } from 'react-icons/fa';
 import { useCartContext } from "../context/CartContext";
 import CartCounter from '../ui/CartCounter';
+import Button from '../ui/Button'
 
 const CartItem = ({ item }) => {
     const { removeFromCart } = useCartContext();

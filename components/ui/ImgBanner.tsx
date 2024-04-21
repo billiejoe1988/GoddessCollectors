@@ -3,8 +3,8 @@ import React from 'react';
 import Image from 'next/image';
 
 interface ImgBannerProps {
-  src: any;
-  alt: any;
+  src: string;
+  alt: string;
 }
 
 const ImgBanner: React.FC<ImgBannerProps> = ({ src, alt }) => {
@@ -27,7 +27,7 @@ const ImgBanner: React.FC<ImgBannerProps> = ({ src, alt }) => {
         }
       `}</style>
       <div className="img-container">
-        <Image src={src} alt={alt} layout="fill" />
+        <Image src={src} alt={alt} layout="fill" objectFit="cover" priority />
       </div>
     </div>
   );

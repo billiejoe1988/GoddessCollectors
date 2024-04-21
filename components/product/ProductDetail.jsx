@@ -4,10 +4,7 @@ import QtySelector from "./QtySelector";
 
 const ProductDetail = async ({ slug }) => {
     const item = await fetch(`http://localhost:3000/api/product/${slug}`, {
-        cache: 'no-store',
-        next:{
-            revalidate: 0
-        }
+        cache: 'no-store'
 
     }).then(res => res.json());
 
@@ -21,6 +18,7 @@ const ProductDetail = async ({ slug }) => {
                         width={800}
                         height={800}
                         className="rounded-lg"
+                        priority={true}
                     />
                 </div>
                 <div className="w-1/2 flex flex-col justify-between">

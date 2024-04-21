@@ -17,10 +17,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = async ({ type }) => {
     const items = await fetch(`http://localhost:3000/api/products/${type}`, {
-        cache: 'force-cache',
-        next:{
-            tags: ["products"]
-        }
+        cache: 'no-cache',
     }).then(r => r.json());
 
     return (
