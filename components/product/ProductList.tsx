@@ -25,10 +25,10 @@ const ProductList: React.FC<ProductListProps> = async ({ type }) => {
 
     return (
         <section className="container m-auto flex justify-center items-center gap-8 flex-wrap">
-            {items.map(item => (
+            {items.map((item: Product) => (
                 <CardSimple key={item.slug} item={item} />
             ))}
-        </section>
+         </section>
     )
 };
 
