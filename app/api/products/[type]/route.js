@@ -1,18 +1,15 @@
-import { data } from "@/data/db.js";
 import { NextResponse } from "next/server";
-import { revalidateTag } from "next/cache";
-
-const sleep = (timer) => {
-    return new Promise((resolve) => setTimeout(resolve, timer));
-};
+import { collection, getDocs, query } from "firebase/firestore";
+import { db } from "@/app/firebase/config";
 
 export async function GET(request, { params }) {
     const { type } = params;
-    const items = type === 'all' ? data : data.filter(item => item.type === type);
+    const productsRef = collection(db, "products");
 
-    await sleep(1000);
+    const q = type === 'all' ? productsRef : query(productsRef, where('type', '==', type));
+    
+    const querySnapshot = await getDocs(q);
+    const docs = querySnapshot.docs.map(doc => doc.data()); 
 
-    revalidateTag("products");
-
-    return NextResponse.json(items);
+    return NextResponse.json(docs);
 }

@@ -1,15 +1,13 @@
-import { data } from "@/data/db.js";
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
+import { doc, getDoc } from 'firebase/firestore'; 
+import { db } from '@/app/firebase/config';
 
-const sleep = (timer) => {
-   return new Promise((resolve) => setTimeout (resolve, timer))
-}
+export async function GET(_, { params }) {
+    const { slug } = params;
 
-export async function GET (_, { params }) {
-    const { slug } = params
-    const items = data.find(item => item.slug === slug)
+    const docRef = doc(db, "products", slug);
 
-    await sleep(1000)
+    const docSnapshot = await getDoc(docRef);
 
-    return NextResponse.json(items)
+    return NextResponse.json(docSnapshot.data());
 }

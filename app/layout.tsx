@@ -4,6 +4,7 @@ import { metadata } from "../Global/StaticData";
 import Header from "../components/ui/Header"
 import Footer from "../components/ui/Footer"
 import BackgroundSVG from "../components/ui/BackgroundSVG"
+import { CartProvider } from '@/components/context/CartContext'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,10 +26,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
-        <BackgroundSVG />
-        <Header/>
-        {children}
-        <Footer/>
+          <CartProvider>
+            <BackgroundSVG />
+            <Header/>
+               {children}
+            <Footer/>
+          </ CartProvider>
         </body>
     </html>
   );
