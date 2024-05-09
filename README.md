@@ -1,6 +1,13 @@
 # ![Goddest Logo](public/Logo.png)
 # Goddess Collectors
 
+<img src="./public/ss1.png" width="300" >
+<img src="./public/ss2.png" width="300" >
+<img src="./public/ss3.png" width="300" >
+<img src="./public/ss4.png" width="300" >
+<img src="./public/ss5.png" width="300" >
+<img src="./public/ss6.png" width="300" >
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
