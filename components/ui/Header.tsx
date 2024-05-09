@@ -2,16 +2,21 @@
 import React, { useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
 import { Logo } from "./Logo.js";
+import { useAuthContext } from "../context/AuthContext.jsx";
 import Link from 'next/link'; 
-import { SearchIcon } from "./SearchIcon";
 import CartWidget  from "./CartWidget";
 import Image from "next/image.js";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logout } = useAuthContext(); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    logout(); 
   };
 
   return (
@@ -49,26 +54,6 @@ export default function Header() {
 
           <NavbarContent as="div" className="items-center flex-grow pl-12" justify="center">
             <div className="relative flex items-center w-full mx-auto">
-              <Input
-                classNames={{
-                  base: "max-w-full sm:max-w-[20rem] h-10 px-2 border-b-2 border-gray-400 bg-transparent",
-                  mainWrapper: "h-full",
-                  input: "text-small flex-grow",
-                  inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20 flex items-center",
-                }}
-                placeholder="Type to search..."
-                size="sm"
-                type="search"
-                className="px-5"
-                style={{ 
-                  outline: "none",
-                  color: "#FFD700",
-                  caretColor: "#FFD700",
-                }}
-              />
-              <div style={{ cursor: "pointer" }} >
-                <SearchIcon size={19} />
-              </div>
               <div className="ml-auto p-2" style={{ cursor: "pointer" }} >
                     <CartWidget />
               </div>
@@ -93,18 +78,19 @@ export default function Header() {
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Profile Actions" variant="flat" className="flex flex-col" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)' }}>
                   <DropdownItem key="profile" className="h-20 gap-2">
-                    <p className="font-semibold">Name</p>
-                    <p className="font-semibold">zoey@example.com</p>
+                    <p className="font-semibold">Testy</p>
+                    <p className="font-semibold">test@test.com</p>
                   </DropdownItem>
-                  <DropdownItem key="settings">My Settings</DropdownItem>
                   <DropdownItem key="admin">
                     <Link href="/pages/Admin">Admin</Link>
                   </DropdownItem>
-                  <DropdownItem key="orders">Orders</DropdownItem>
+                  <DropdownItem key="orders">
+                    <Link href="/pages/Admin/orders">Orders</Link>
+                  </DropdownItem>
                   <DropdownItem key="contactUs">
                     <Link href="/pages/ContactUs">Contact Us</Link>
                   </DropdownItem>
-                  <DropdownItem key="logout" className="bg-blue-200 border-2 py-1 my-2">
+                  <DropdownItem key="logout" onClick={handleLogout} className="bg-blue-200 border-2 py-1 my-2">
                     Log Out
                   </DropdownItem>
                 </DropdownMenu>
@@ -116,4 +102,3 @@ export default function Header() {
     </header>
   );
 }
-
